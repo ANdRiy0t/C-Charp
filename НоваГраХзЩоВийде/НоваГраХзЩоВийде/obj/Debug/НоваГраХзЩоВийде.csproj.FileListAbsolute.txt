@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\НоваГраХзЩоВийде\НоваГраХзЩоВийде\bin\Debug\НоваГраХзЩоВийде.exe.config
+C:\Users\User\source\repos\НоваГраХзЩоВийде\НоваГраХзЩоВийде\bin\Debug\НоваГраХзЩоВийде.exe
+C:\Users\User\source\repos\НоваГраХзЩоВийде\НоваГраХзЩоВийде\bin\Debug\НоваГраХзЩоВийде.pdb
+C:\Users\User\source\repos\НоваГраХзЩоВийде\НоваГраХзЩоВийде\obj\Debug\НоваГраХзЩоВийде.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\НоваГраХзЩоВийде\НоваГраХзЩоВийде\obj\Debug\НоваГраХзЩоВийде.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\НоваГраХзЩоВийде\НоваГраХзЩоВийде\obj\Debug\НоваГраХзЩоВийде.Form1.resources
+C:\Users\User\source\repos\НоваГраХзЩоВийде\НоваГраХзЩоВийде\obj\Debug\НоваГраХзЩоВийде.Properties.Resources.resources
+C:\Users\User\source\repos\НоваГраХзЩоВийде\НоваГраХзЩоВийде\obj\Debug\НоваГраХзЩоВийде.csproj.GenerateResource.cache
+C:\Users\User\source\repos\НоваГраХзЩоВийде\НоваГраХзЩоВийде\obj\Debug\НоваГраХзЩоВийде.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\НоваГраХзЩоВийде\НоваГраХзЩоВийде\obj\Debug\НоваГраХзЩоВийде.exe
+C:\Users\User\source\repos\НоваГраХзЩоВийде\НоваГраХзЩоВийде\obj\Debug\НоваГраХзЩоВийде.pdb
