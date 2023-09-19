@@ -9,11 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+//asdfasdfsdfsfdas
+
 namespace TIcTAcToe_Адаптив
 {
 	public partial class Form1 : Form
 	{
-		static int N = 3;
+		static int N = 6;
 		// це поле яке показує скільки обьєктів має бути в ряд щоб виграти
 		static int WinIN = 3;
 		// Масив карти
@@ -30,7 +33,6 @@ namespace TIcTAcToe_Адаптив
 		byte[] ChekingForWin = new byte[WinIN];
 
 		byte x = 0, y = 0;
-
 
 		string HID = "Player";
 
@@ -109,16 +111,11 @@ namespace TIcTAcToe_Адаптив
 			foreach (char helpChar in arr)
 			{
 				_ = helpChar == '_' ? HelpBool = true : HelpBool;
-				switch (HelpBool) {
-					case false:
-						result1 += helpChar.ToString();
-						break;
-					case true:
-						_=helpChar != '_' ? result2 += helpChar.ToString() : helpChar.ToString();
-						break;				
-				
-				}
-			}
+				if(HelpBool)
+                    _ = helpChar != '_' ? result2 += helpChar.ToString() : helpChar.ToString();
+				else
+                    result1 += helpChar.ToString();
+            }
 
 				x = Byte.Parse(result1);
 				y = Byte.Parse(result2);
@@ -128,9 +125,10 @@ namespace TIcTAcToe_Адаптив
 		{
 			for(int i = 0; i < N; i++)
 			{
-				for(int b=0; b < N; b++)
+				for(int j=0; j < N; j++)
 				{
-					
+					if (pictureBoxes[i].BackColor == )
+
 				}
 			}
 		}
