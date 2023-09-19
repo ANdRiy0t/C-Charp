@@ -16,7 +16,7 @@ namespace TIcTAcToe_Адаптив
 {
 	public partial class Form1 : Form
 	{
-		static int N = 6;
+		static int N = 1;
 		// це поле яке показує скільки обьєктів має бути в ряд щоб виграти
 		static int WinIN = 3;
 		// Масив карти
@@ -25,7 +25,7 @@ namespace TIcTAcToe_Адаптив
 
 		char Player = 'X', BOT = 'O';
 		static int STARTposX = 10, STARTposY = 10;
-		static sbyte SIZE = 50;
+		static sbyte SIZE = 100;
 
 		Random rand = new Random();
 
@@ -80,9 +80,16 @@ namespace TIcTAcToe_Адаптив
 			{
 				TakeLocation(pic, ref x, ref y);
 
-				dataMAP[x, y] = Player;
+				Image imageToe = Image.FromFile(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "toe.png"));
+
+                dataMAP[x, y] = Player;
 				pictureBoxes[(x - 1) * N + y + N].BackColor = Color.Green;
-				HID = "BOT";
+				
+				pictureBoxes[(x - 1) * N + y + N].SizeMode = PictureBoxSizeMode.Zoom;
+                pictureBoxes[(x - 1) * N + y + N].Image = imageToe;
+                //pictureBoxes[(x - 1) * N + y + N].AutoSize = true;
+                //pictureBoxes[(x - 1) * N + y + N].Size = pictureBoxes[(x - 1) * N + y + N].Image.Size;
+                HID = "BOT";
 				TIMER.Start();
 			}
 		}
@@ -127,7 +134,7 @@ namespace TIcTAcToe_Адаптив
 			{
 				for(int j=0; j < N; j++)
 				{
-					if (pictureBoxes[i].BackColor == )
+					//if (pictureBoxes[i].BackColor == )
 
 				}
 			}

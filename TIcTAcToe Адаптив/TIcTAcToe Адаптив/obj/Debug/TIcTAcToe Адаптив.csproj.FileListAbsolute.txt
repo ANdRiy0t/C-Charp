@@ -19,3 +19,13 @@ C:\Users\User\Source\Repos\C-Charp\TIcTAcToe Адаптив\TIcTAcToe Адапт
 C:\Users\User\Source\Repos\C-Charp\TIcTAcToe Адаптив\TIcTAcToe Адаптив\obj\Debug\TIcTAcToe Адаптив.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\C-Charp\TIcTAcToe Адаптив\TIcTAcToe Адаптив\obj\Debug\TIcTAcToe Адаптив.exe
 C:\Users\User\Source\Repos\C-Charp\TIcTAcToe Адаптив\TIcTAcToe Адаптив\obj\Debug\TIcTAcToe Адаптив.pdb
+C:\Users\User\Documents\GitHub\C-Charp\TIcTAcToe Адаптив\TIcTAcToe Адаптив\obj\Debug\TIcTAcToe Адаптив.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\C-Charp\TIcTAcToe Адаптив\TIcTAcToe Адаптив\obj\Debug\TIcTAcToe_Адаптив.Form1.resources
+C:\Users\User\Documents\GitHub\C-Charp\TIcTAcToe Адаптив\TIcTAcToe Адаптив\obj\Debug\TIcTAcToe_Адаптив.Properties.Resources.resources
+C:\Users\User\Documents\GitHub\C-Charp\TIcTAcToe Адаптив\TIcTAcToe Адаптив\obj\Debug\TIcTAcToe Адаптив.csproj.GenerateResource.cache
+C:\Users\User\Documents\GitHub\C-Charp\TIcTAcToe Адаптив\TIcTAcToe Адаптив\obj\Debug\TIcTAcToe Адаптив.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\C-Charp\TIcTAcToe Адаптив\TIcTAcToe Адаптив\obj\Debug\TIcTAcToe Адаптив.exe
+C:\Users\User\Documents\GitHub\C-Charp\TIcTAcToe Адаптив\TIcTAcToe Адаптив\obj\Debug\TIcTAcToe Адаптив.pdb
+C:\Users\User\Documents\GitHub\C-Charp\TIcTAcToe Адаптив\TIcTAcToe Адаптив\bin\Debug\TIcTAcToe Адаптив.exe.config
+C:\Users\User\Documents\GitHub\C-Charp\TIcTAcToe Адаптив\TIcTAcToe Адаптив\bin\Debug\TIcTAcToe Адаптив.exe
+C:\Users\User\Documents\GitHub\C-Charp\TIcTAcToe Адаптив\TIcTAcToe Адаптив\bin\Debug\TIcTAcToe Адаптив.pdb
