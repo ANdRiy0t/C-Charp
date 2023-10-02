@@ -148,22 +148,24 @@ namespace TIcTAcToe_Адаптив
         {
             CheckingWinInRow(PlayerOrBot);
             ChekingWinInLine(PlayerOrBot);
+            ChekingWinInRightDown(PlayerOrBot);
+            ChekingWinInLeftDown(PlayerOrBot);
         }
 
         private void CheckingWinInRow(char PlayerOrBot)
         {
-            int veribleForWin = 0;
+            int variableForWin = 0;
             for (int i = 0; i < sizePlayMap; i++)
             {
                 for (int j = 0; j < sizePlayMap; j++)
                 {
                     //if (pictureBoxes[i].BackColor == )
                     if (map[i, j] == PlayerOrBot)
-                        veribleForWin++;
+                        variableForWin++;
                     else
-                        veribleForWin = 0;
+                        variableForWin = 0;
 
-                    if (veribleForWin == countCubeInLineFowWin)
+                    if (variableForWin == countCubeInLineFowWin)
                     {
                         MessageBox.Show($"Win: {PlayerOrBot}");
                     }
@@ -173,21 +175,78 @@ namespace TIcTAcToe_Адаптив
 
         private void ChekingWinInLine(char PlayerOrBot)
         {
-            int veribleForWin = 0;
+            int variableForWin = 0;
             for (int i = 0; i < sizePlayMap; i++)
             {
                 for (int j = 0; j < sizePlayMap; j++)
                 {
                     //if (pictureBoxes[i].BackColor == )
                     if (map[j, i] == PlayerOrBot)
-                        veribleForWin++;
+                        variableForWin++;
                     else
-                        veribleForWin = 0;
+                        variableForWin = 0;
 
-                    if (veribleForWin == countCubeInLineFowWin)
+                    if (variableForWin == countCubeInLineFowWin)
                     {
                         MessageBox.Show($"Win: {PlayerOrBot}");
                     }
+                }
+            }
+        }
+
+        private void ChekingWinInRightDown(char PlayerOrBot)
+        {
+            int variableForWin = 0;
+            for(int i = 0; i <= sizePlayMap - countCubeInLineFowWin; i++)
+            {
+                for(int j = 0; j <= sizePlayMap - countCubeInLineFowWin; j++)
+                {
+                    int tempI = i, tempJ = j;
+                    for (int k = 0; k <= countCubeInLineFowWin-1; k++)
+                    {
+                        if (map[tempI, tempJ] == PlayerOrBot)
+                        {
+                            variableForWin++;
+                            tempI++;
+                            tempJ++;
+                        }
+                        
+                    }
+                    if (variableForWin == countCubeInLineFowWin)
+                        MessageBox.Show($"Win: {PlayerOrBot}");
+                    else
+                        variableForWin = 0;
+                }
+            }
+        }
+        //left down в розробці
+
+        private void ChekingWinInLeftDown(char PlayerOrBot)
+        {
+            int variableForWin = 0;
+            for (int i = sizePlayMap-1;
+                i >= countCubeInLineFowWin - 1;
+                i--)
+            {
+                for (int j = sizePlayMap-1;
+                    j >= countCubeInLineFowWin - 1;
+                    j--)
+                {
+                    int tempI = i, tempJ = j;
+                    for (int k = 0; k <= countCubeInLineFowWin-1; k++)
+                    {
+                        if (map[i, j] == PlayerOrBot)
+                        {
+                            variableForWin++;
+                            i--;
+                            j--;
+                        }
+
+                    }
+                    if (variableForWin == countCubeInLineFowWin)
+                        MessageBox.Show($"Win: {PlayerOrBot}");
+                    else
+                        variableForWin = 0;
                 }
             }
         }
@@ -226,6 +285,8 @@ namespace TIcTAcToe_Адаптив
             }
             int random = rand.Next(sizePlayMap * sizePlayMap);
 
+            ChekinWinGameOrNot(dataWhichAddToMassiveForBOT);
+
             if (pictureBoxes[random].BackColor == Color.LightGray)
             {
                 TakeLocation(pictureBoxes[random], ref x, ref y);
@@ -238,7 +299,7 @@ namespace TIcTAcToe_Адаптив
                 //HID = "Player";
                 Level1_RANDOM();
 
-            ChekinWinGameOrNot(dataWhichAddToMassiveForBOT);
+            
 
 
             //GC.Collect();
