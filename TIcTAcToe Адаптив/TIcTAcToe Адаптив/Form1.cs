@@ -17,9 +17,9 @@ namespace TIcTAcToe_Адаптив
 {
     public partial class Form1 : Form
     {
-        static int sizePlayMap = 7;
+        static int sizePlayMap = 12;
         // це поле яке показує скільки обьєктів має бути в ряд щоб виграти
-        static int countCubeInLineFowWin = 4;
+        static int countCubeInLineFowWin = 5;
         // Масив карти
         char[,] map = new char[sizePlayMap, sizePlayMap];
         List<PictureBox> pictureBoxes = new List<PictureBox>();
@@ -228,9 +228,7 @@ namespace TIcTAcToe_Адаптив
                 i >= countCubeInLineFowWin - 1;
                 i--)
             {
-                for (int j = sizePlayMap-1;
-                    j >= countCubeInLineFowWin - 1;
-                    j--)
+                for (int j = 0; j <= sizePlayMap - countCubeInLineFowWin; j++)
                 {
                     int tempI = i, tempJ = j;
                     for (int k = 0; k <= countCubeInLineFowWin-1; k++)
@@ -239,7 +237,7 @@ namespace TIcTAcToe_Адаптив
                         {
                             variableForWin++;
                             i--;
-                            j--;
+                            j++;
                         }
 
                     }
@@ -268,6 +266,11 @@ namespace TIcTAcToe_Адаптив
             }
         }
 
+
+        private void Level2_DEFENCE()
+        {
+
+        }
 
         //    ___     __   _______           
         //    -  -  -    -    |
