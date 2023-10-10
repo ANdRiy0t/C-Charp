@@ -17,9 +17,10 @@ namespace TIcTAcToe_Адаптив
 {
     public partial class Form1 : Form
     {
-        static int sizePlayMap = 12;
+
+        static int sizePlayMap = 13;
         // це поле яке показує скільки обьєктів має бути в ряд щоб виграти
-        static int countCubeInLineFowWin = 5;
+        static int countCubeInLineFowWin = 6;
         // Масив карти
         char[,] map = new char[sizePlayMap, sizePlayMap];
         List<PictureBox> pictureBoxes = new List<PictureBox>();
@@ -27,6 +28,8 @@ namespace TIcTAcToe_Адаптив
         char dataWhichAddToMassiveForPlayer = 'X', dataWhichAddToMassiveForBOT = 'O';
         static int startPossitionForLeftSide = 10, startPossitionForTopSide = 10;
         static sbyte sizeButton = 35;
+
+        bool WIN = false;
 
         Random rand = new Random();
 
@@ -168,6 +171,8 @@ namespace TIcTAcToe_Адаптив
                     if (variableForWin == countCubeInLineFowWin)
                     {
                         MessageBox.Show($"Win: {PlayerOrBot}");
+                        WIN = true;
+                        
                     }
                 }
             }
@@ -189,6 +194,7 @@ namespace TIcTAcToe_Адаптив
                     if (variableForWin == countCubeInLineFowWin)
                     {
                         MessageBox.Show($"Win: {PlayerOrBot}");
+                        WIN = true;
                     }
                 }
             }
@@ -212,8 +218,11 @@ namespace TIcTAcToe_Адаптив
                         }
                         
                     }
-                    if (variableForWin == countCubeInLineFowWin)
+                    if (variableForWin == countCubeInLineFowWin) 
+                    { 
                         MessageBox.Show($"Win: {PlayerOrBot}");
+                        WIN = true;
+                    }
                     else
                         variableForWin = 0;
                 }
@@ -242,7 +251,11 @@ namespace TIcTAcToe_Адаптив
 
                     }
                     if (variableForWin == countCubeInLineFowWin)
+                    {
                         MessageBox.Show($"Win: {PlayerOrBot}");
+                        WIN = true;
+                    }
+                        
                     else
                         variableForWin = 0;
                 }
@@ -267,10 +280,7 @@ namespace TIcTAcToe_Адаптив
         }
 
 
-        private void Level2_DEFENCE()
-        {
-
-        }
+        
 
         //    ___     __   _______           
         //    -  -  -    -    |
@@ -306,6 +316,86 @@ namespace TIcTAcToe_Адаптив
 
 
             //GC.Collect();
+        }
+
+        private void Level2_DEFENCE()
+        {
+
+            List<List<Pair<int, Pair<int, int>>>> a = new List<List<Pair<int, Pair<int, int>>>>;
+
+            ////
+            //int countForWinPlayer = 0;
+
+            //for (int i = 0; i < sizePlayMap; i++)
+            //{
+            //    for(int b = 0; b < sizePlayMap; b++)
+            //    {
+            //        if (map[b, i] == dataWhichAddToMassiveForPlayer)
+            //            countForWinPlayer++;
+            //        else
+            //            countForWinPlayer = 0;
+
+            //        if(i != 0)
+            //        {
+            //         //   if (map[b,i])
+            //        }
+
+            //        if(countForWinPlayer == countCubeInLineFowWin - 2)
+            //        {
+
+            //        }
+            //    }
+            //} 
+            //if (WIN) return;
+            //ChekinWinGameOrNot(dataWhichAddToMassiveForBOT);
+            ////перевіряємо одну клітинку на N клітинок вправо вниз і вниз вправо
+            ////створюємо масив з назвами Right, Down, RightDown в які додаємо клітинку якщо вона ворожа
+            ////далі перевіряємо в якому масиві найбільше елементів і ставимо випадково клітинку в пусту якщо їх більше одної
+            ////продумати вниз вліво
+            ////x  
+            ////масив в якому два масиви в яких є Nsize-N+1 масивів в яких ще 3 масиви
+            //int variableForWin = 0;
+
+            //char[,] Right = new char[sizePlayMap - countCubeInLineFowWin + 1, 4];
+            //char[,] Left = new char[sizePlayMap - countCubeInLineFowWin + 1, 4];
+            
+            //for (int i = 0; i < sizePlayMap; i++)
+            //{
+            //    for (int j = 0; j < sizePlayMap; j++)
+            //    {
+            //        if (map[i, j] == dataWhichAddToMassiveForBOT)
+            //            variableForWin++;
+            //        else
+            //            variableForWin = 0;
+
+                    
+            //    }
+            //}
+
+        }
+
+        private void Level3_ATTACK()
+        {
+            
+        }
+
+        public class Pair<T1, T2>
+        {
+            public T1 First
+            {
+                get;
+                set;
+            }
+            public T2 Second
+            {
+                get;
+                set;
+            }
+            public Pair(T1 first, T2 second)
+            {
+                First = first;
+                Second = second;
+            }
         }
     }
 }
